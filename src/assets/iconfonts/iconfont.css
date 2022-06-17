@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3456342 */
+  src: url('iconfont.woff2?t=1654930871690') format('woff2'),
+       url('iconfont.woff?t=1654930871690') format('woff'),
+       url('iconfont.ttf?t=1654930871690') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-del:before {
+  content: "\e600";
+}
+
+.icon-love:before {
+  content: "\e648";
+}
+
+.icon-paint:before {
+  content: "\e69e";
+}
+
+.icon-nice:before {
+  content: "\e651";
+}
+
+.icon-right1:before {
+  content: "\e61e";
+}
+
+.icon-right2:before {
+  content: "\e601";
+}
+
+.icon-left1:before {
+  content: "\e602";
+}
+
+.icon-love2:before {
+  content: "\e60a";
+}
+
+.icon-clock:before {
+  content: "\e728";
+}
+
+.icon-No-Wifi:before {
+  content: "\ecbb";
+}
+
+.icon-right3:before {
+  content: "\e658";
+}
+
+.icon-left3:before {
+  content: "\e659";
+}
+
+.icon-chat:before {
+  content: "\e758";
+}
+
+.icon-vedio:before {
+  content: "\e603";
+}
+
+.icon-nice2:before {
+  content: "\e61c";
+}
+
+.icon-love3:before {
+  content: "\e8b9";
+}
+
+.icon-share:before {
+  content: "\e713";
+}
+
+.icon-book:before {
+  content: "\e6ea";
+}
+
+.icon-pen:before {
+  content: "\e649";
+}
+
+.icon-love4:before {
+  content: "\ed70";
+}
+
+.icon-vedio2:before {
+  content: "\e637";
+}
+
+.icon-home:before {
+  content: "\e6ca";
+}
+
+.icon-search:before {
+  content: "\e653";
+}
+
+.icon-err:before {
+  content: "\e61f";
+}
+
+.icon-password:before {
+  content: "\e65c";
+}
+
+.icon-phone:before {
+  content: "\e674";
+}
+
+.icon-list:before {
+  content: "\e66b";
+}
+
+.icon-my:before {
+  content: "\e604";
+}
+
+.icon-problem:before {
+  content: "\e739";
+}
+
