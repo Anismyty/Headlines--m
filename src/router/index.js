@@ -39,15 +39,30 @@ const routes = [
         component: () => import('@/views/my'),
       },
     ],
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: () => import('@/views/search'),
+  },
+  {
+    path: '/article/:articleId', //动态拼接文章id
+    name: 'article',
+    component: () => import('@/views/article'),
+    props: true, //开启props传参
+  },
+  {
+    path: '/user/profile',
+    name: 'userprofile',
+    component: () => import('@/views/userprofile'),
   },{
-    path:'/search',
-    name:'search',
-    component:()=>import('@/views/search')
+    path: '/my/colAndhis',
+    name: 'colAndhis',
+    component: () => import('@/views/colAndhis'),
   },{
-    path:'/article/:articleId',  //动态拼接文章id
-    name:'article',
-    component:()=>import('@/views/article'),
-    props:true //开启props传参
+    path: '/my/robot',
+    name: 'robot',
+    component: () => import('@/views/robot'),
   }
 ]
 

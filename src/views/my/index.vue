@@ -8,7 +8,12 @@
           <span>{{ userInfo.name }}</span>
         </div>
         <div class="right">
-          <van-button type="default" size="mini" round color="#A0A0A0"
+          <van-button
+            type="default"
+            size="mini"
+            round
+            color="#A0A0A0"
+            to="/user/profile"
             >编辑资料</van-button
           >
         </div>
@@ -19,13 +24,16 @@
           ><span class="text">头条</span>
         </div>
         <div class="data-item">
-          <span class="count">{{ userInfo.follow_count }}</span><span class="text">关注</span>
+          <span class="count">{{ userInfo.follow_count }}</span
+          ><span class="text">关注</span>
         </div>
         <div class="data-item">
-          <span class="count">{{ userInfo.fans_count }}</span><span class="text">粉丝</span>
+          <span class="count">{{ userInfo.fans_count }}</span
+          ><span class="text">粉丝</span>
         </div>
         <div class="data-item">
-          <span class="count">{{ userInfo.like_count }}</span><span class="text">获赞</span>
+          <span class="count">{{ userInfo.like_count }}</span
+          ><span class="text">获赞</span>
         </div>
       </div>
     </div>
@@ -40,11 +48,11 @@
 
     <div class="content-tab">
       <van-grid clickable :column-num="2">
-        <van-grid-item>
+        <van-grid-item :to="{ name: 'colAndhis', params: { part: 0 } }">
           <i slot="icon" class="iconfont icon-love2"></i>
           <span slot="text" class="text">收藏</span>
         </van-grid-item>
-        <van-grid-item>
+        <van-grid-item :to="{ name: 'colAndhis', params: { part: 1 } }">
           <i slot="icon" class="iconfont icon-clock"></i>
           <span slot="text" class="text">历史</span>
         </van-grid-item>
@@ -52,7 +60,7 @@
     </div>
     <div class="cell">
       <van-cell title="消息通知" is-link />
-      <van-cell title="小智同学" is-link />
+      <van-cell title="小智同学" is-link :to="{ name: 'robot' }" />
     </div>
     <van-cell
       v-if="user"

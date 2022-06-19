@@ -52,12 +52,53 @@ export const followUser = (target) => {
 }
 
 //取消关注
-export const unfollowUser = (userId) => {
+export const unfollowUser = (target) => {
   return request({
     method: 'DELETE',
-    url: `/v1_0/user/followings/`,
-    data: {
-      target: userId,
-    },
+    url: `/v1_0/user/followings/${target}`,
+  })
+}
+
+//获取用户文档
+export const getUserProfile = () => {
+  return request({
+    method: 'GET',
+    url: '/v1_0/user/profile',
+  })
+}
+
+//编辑用户资料
+export const editUserProfile = (data) => {
+  return request({
+    method: 'PATCH',
+    url: '/v1_0/user/profile',
+    data,
+  })
+}
+
+//编辑用户照片资料
+export const editUserPhoto = (data) => {
+  return request({
+    method: 'PATCH',
+    url: '/v1_0/user/photo',
+    data,
+  })
+}
+
+//获取用户收藏列表
+export const getUserCollect = (params) => {
+  return request({
+    method: 'GET',
+    url: '/v1_0/article/collections',
+    params,
+  })
+}
+
+//获取用户历史记录
+export const getUserHistory = (params) => {
+  return request({
+    method: 'GET',
+    url: '/v1_0/user/histories',
+    params,
   })
 }

@@ -7,6 +7,7 @@
       :loading="followLoding"
       color="linear-gradient(to right, #ff6034, #ee0a24)"
       class="guanzhu"
+      @click="following"
     >
       已关注
     </van-button>
@@ -29,7 +30,7 @@ import { followUser, unfollowUser } from '@/api/user'
 
 export default {
   name: 'FollowUser',
- /*  model:{
+  /*  model:{
     prop:'',  //默认是value
     event:''  //默认是input
   }, */
@@ -53,8 +54,10 @@ export default {
     async following() {
       this.followLoding = true
       try {
-        if (this.value) {
-          await unfollowUser(Number(this.userid))
+        if (this.value === true) {
+          console.log(1)
+          const res = await unfollowUser(Number(this.userid))
+          console.log(res)
         } else {
           await followUser(Number(this.userid))
         }
