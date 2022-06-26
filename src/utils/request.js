@@ -38,3 +38,4 @@ request.interceptors.request.use(
 )
 
 export default request
+export const baseURL = 'http://toutiao.itheima.net'

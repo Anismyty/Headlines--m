@@ -88,7 +88,11 @@
         ></LikeArticle>
 
         <!-- 分享 -->
-        <van-icon class-prefix="iconfont icon-share" class="iconfont" />
+        <van-icon
+          class-prefix="iconfont icon-share"
+          class="iconfont"
+          @click="share"
+        />
       </footer>
       <!-- 底部区域 -->
 
@@ -134,6 +138,13 @@
         @close="show2 = false"
       ></ReplyComment>
     </van-popup>
+
+    <!-- 分享 -->
+    <van-share-sheet
+      v-model="showShare"
+      title="立即分享给好友"
+      :options="options"
+    />
   </div>
 </template>
 
@@ -181,6 +192,14 @@ export default {
       commentlist: [],
       show2: false, //评论回复弹窗
       currentcomment: {}, //当前评论
+      showShare: false, //分享弹窗
+      options: [
+        { name: '微信', icon: 'wechat' },
+        { name: '微博', icon: 'weibo' },
+        { name: '复制链接', icon: 'link' },
+        { name: '分享海报', icon: 'poster' },
+        { name: '二维码', icon: 'qrcode' },
+      ],
     }
   },
   methods: {
@@ -244,6 +263,9 @@ export default {
       //显示评论回复弹出层
       this.show2 = true
       this.currentcomment = comment
+    },
+    share() {
+      this.showShare = true
     },
   },
   created() {

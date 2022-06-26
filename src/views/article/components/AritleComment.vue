@@ -2,7 +2,7 @@
   <van-list
     v-model="loading"
     :finished="finished"
-    finished-text="没有更多了"
+    :finished-text="list.length === 0 ? '' : '没有更多了'"
     :error="error"
     error-text="加载失败,请点击重试"
     :immediate-check="false"
@@ -16,6 +16,9 @@
     </van-cell>
     <!-- 第一行 -->
 
+    <!-- 如果没有评论 -->
+    <van-empty image="error" description="暂无评论" v-if="list.length === 0" />
+
     <!-- 遍历循环的评论内容 -->
     <CommentItem
       v-for="(e, i) in list"
@@ -23,7 +26,7 @@
       :list="e"
       @reply-click="toIndedx"
       @second-click="second"
-      :status='status'
+      :status="status"
     ></CommentItem>
     <!-- 遍历循环的评论内容 -->
   </van-list>
@@ -120,5 +123,8 @@ export default {
   .van-image {
     margin-right: 30px;
   }
+}
+.van-empty{
+  background-color: #fff;
 }
 </style>

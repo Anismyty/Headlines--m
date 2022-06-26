@@ -3,9 +3,14 @@
     <van-list
       v-model="loading"
       :finished="finished"
-      finished-text="没有更多了"
+      :finished-text="historyList.length === 0 ? '' : '没有更多了'"
       @load="onLoad"
     >
+      <van-empty
+        image="error"
+        description="暂无收藏"
+        v-if="historyList.length === 0"
+      />
       <!-- <van-cell v-for="(e, i) in list" :key="i" :title="e.title" /> -->
       <ArticleList
         v-for="(e, i) in historyList"
