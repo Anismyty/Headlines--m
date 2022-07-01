@@ -41,6 +41,7 @@ export default {
         })
         try {
           const { data } = await editUserPhoto(formData)
+          console.log(formData);
           this.$emit('confirm', data.data.photo)
           this.$toast.success('修改成功')
         } catch (err) {

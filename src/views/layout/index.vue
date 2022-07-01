@@ -1,7 +1,10 @@
 <template>
   <div class="layout-container">
     <!-- 子路由出口 -->
-    <div class="top"><router-view></router-view></div>
+    <!-- 设置缓存，include写的是页面name属性 -->
+    <keep-alive :include="['HomeIndex']">
+      <router-view></router-view>
+    </keep-alive>
 
     <!-- 标签底部 -->
     <!-- 开启路由模式，active就多余了 -->
@@ -47,7 +50,7 @@ export default {
       margin-left: 5px;
     }
   }
-  .top{
+  .top {
     padding-bottom: 100px;
   }
 }

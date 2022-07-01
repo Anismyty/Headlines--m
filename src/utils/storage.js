@@ -24,8 +24,14 @@ export const getItem = (key) => {
   }
 }
 
-/* 删除数据 */
+/* 删除数据【删除某一个】 */
 
 export const removeItem = (key) => {
   window.localStorage.removeItem(key)
+}
+
+/* 删除本地所有存储 */
+
+export const clearItem = () => {
+  window.localStorage.clearItem()
 }
